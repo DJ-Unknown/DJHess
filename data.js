@@ -45,10 +45,10 @@
 
 const THEMES = {
 
-  "exemple": {
-    title: "Thème exemple",
+  "a_la_campagne": {
+    title: "A la campagne",
     tracks: [
-      { answer: "Réponse 1", title: "Titre de la musique 1", artist: "Artiste 1", audio: "audio/exemple/1.mp3", limit: 15 },
+      { answer: "Fleurs/Flowers", title: "Flowers", artist: "Miley Cyrus", audio: "audio/a_la_campagne/miley-cyrus-flowers.mp3", limit: 26 },
       { answer: "Réponse 2", title: "Titre de la musique 2", artist: "Artiste 2", audio: "audio/exemple/2.mp3", limit: 15 },
       { answer: "Réponse 3", title: "Titre de la musique 3", artist: "Artiste 3", audio: "audio/exemple/3.mp3", limit: 15 },
       { answer: "Réponse 4", title: "Titre de la musique 4", artist: "Artiste 4", audio: "audio/exemple/4.mp3", limit: 15 },
