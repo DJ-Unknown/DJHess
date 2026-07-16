@@ -49,12 +49,12 @@ const THEMES = {
     title: "A la campagne",
     tracks: [
       { answer: "Fleurs/Flowers", title: "Flowers", artist: "Miley Cyrus", audio: "audio/a_la_campagne/miley-cyrus-flowers.mp3", limit: 26 },
-      { answer: "Réponse 2", title: "Titre de la musique 2", artist: "Artiste 2", audio: "audio/exemple/2.mp3", limit: 15 },
-      { answer: "Réponse 3", title: "Titre de la musique 3", artist: "Artiste 3", audio: "audio/exemple/3.mp3", limit: 15 },
-      { answer: "Réponse 4", title: "Titre de la musique 4", artist: "Artiste 4", audio: "audio/exemple/4.mp3", limit: 15 },
-      { answer: "Réponse 5", title: "Titre de la musique 5", artist: "Artiste 5", audio: "audio/exemple/5.mp3", limit: 15 },
-      { answer: "Réponse 6", title: "Titre de la musique 6", artist: "Artiste 6", audio: "audio/exemple/6.mp3", limit: 15 },
-      { answer: "Réponse 7", title: "Titre de la musique 7", artist: "Artiste 7", audio: "audio/exemple/7.mp3", limit: 15 }
+      { answer: "Prairie", title: "La petite maison dans la prairie", artist: "David Rose", audio: "audio/a_la_campagne/maison-prairie.mp3", limit: 30 },
+      { answer: "Ferme/Fermier", title: "Sans contrefaçon", artist: "Mylène Farmer", audio: "audio/a_la_campagne/sans-contrefacon.mp3", limit: 30 },
+      { answer: "Des champs", title: "Ramenez la coupe à la maison", artist: "Vegedream", audio: "audio/a_la_campagne/vegedream-ramenez-la-coupe.mp3", limit: 30 },
+      { answer: "Village", title: "YMCA", artist: "Village People", audio: "audio/a_la_campagne/village-people-ymca.mp3", limit: 30 },
+      { answer: "Oiseaux", title: "Birds", artist: "Imagine Dragons", audio: "audio/a_la_campagne/imagine-dragons-birds.mp3", limit: 35 },
+      { answer: "Poulain", title: "Comptine d'un autre été", artist: "Yann Tiersen", audio: "audio/a_la_campagne/yann-tiersen-comptine-ete.mp3", limit: 30 }
     ]
   }
 
