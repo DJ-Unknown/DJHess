@@ -1,0 +1,354 @@
+:root {
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --grey: #b3b3b3;
+  --grey-light: #ececec;
+  --red: #e0102b;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--white);
+  color: var(--black);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding-top: calc(16px + var(--safe-top));
+  padding-bottom: calc(16px + var(--safe-bottom));
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+.disc:focus-visible,
+.arrow:focus-visible {
+  outline: 3px solid var(--black);
+  outline-offset: 3px;
+}
+
+/* ---------- Écran de sélection de thème ---------- */
+
+#screen-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  gap: 24px;
+}
+
+#screen-menu h1 {
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#screen-menu p {
+  color: var(--grey);
+  font-size: 14px;
+  margin: 0;
+  max-width: 32ch;
+}
+
+.theme-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.theme-list button {
+  background: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 999px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.theme-list button:active {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* ---------- Écran de jeu ---------- */
+
+#screen-game {
+  flex: 1;
+  display: none;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+#screen-game.active { display: flex; }
+#screen-menu.hidden { display: none; }
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--black);
+  padding: 6px 10px 6px 0;
+}
+
+.theme-title {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  flex: 1;
+}
+
+.card-counter {
+  font-size: 13px;
+  color: var(--grey);
+  min-width: 40px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Carrousel de disques ---------- */
+
+.carousel-wrap {
+  padding: 6px 0 18px 0;
+}
+
+.carousel {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 6px calc(50% - 26px);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar { display: none; }
+
+.disc {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--black);
+  background: var(--white);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  scroll-snap-align: center;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.disc.active {
+  background: var(--black);
+  color: var(--white);
+  transform: scale(1.12);
+}
+
+/* ---------- Zone de lecture ---------- */
+
+.player-row {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  width: 44px;
+  height: 64px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+}
+
+.arrow svg { width: 22px; height: 22px; }
+
+.arrow:disabled {
+  color: var(--grey-light);
+}
+
+.player-card {
+  flex: 1;
+  border: 2px solid var(--black);
+  border-radius: 20px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 260px;
+  justify-content: center;
+}
+
+.reveal-btn {
+  background: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  align-self: center;
+  width: 100%;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.reveal-btn.revealed {
+  background: var(--black);
+  color: var(--white);
+}
+
+.reveal-btn:disabled {
+  opacity: 0.6;
+}
+
+.answer-box {
+  min-height: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+  padding: 4px 6px;
+}
+
+.answer-box .placeholder {
+  color: var(--grey);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.answer-main {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.answer-sub {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+.transport {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.play-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--black);
+  border: none;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn svg { width: 22px; height: 22px; fill: var(--white); }
+
+.progress-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progress-bar {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--grey-light);
+  overflow: visible;
+}
+
+.progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0%;
+  border-radius: 999px;
+  background: var(--black);
+  transition: background 0.2s ease;
+}
+
+.progress-fill.over-limit {
+  background: var(--red);
+}
+
+.progress-limit {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 2px;
+  background: var(--black);
+  left: 0%;
+}
+
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--grey);
+  font-variant-numeric: tabular-nums;
+}
+
+.audio-error {
+  font-size: 12px;
+  color: var(--red);
+  text-align: center;
+  display: none;
+}
+
+.audio-error.visible { display: block; }
+
+@media (min-width: 480px) {
+  .player-card { padding: 28px 24px; }
+  .theme-title { font-size: 17px; }
+}

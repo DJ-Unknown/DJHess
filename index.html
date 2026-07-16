@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Blind Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Écran d'accueil : choix du thème (utile pour tester sans QR code) -->
+  <div id="screen-menu">
+    <h1>Blind Test</h1>
+    <p>Scanne le QR code d'une carte, ou choisis un thème ci-dessous pour tester.</p>
+    <div class="theme-list" id="theme-list"></div>
+  </div>
+
+  <!-- Écran de jeu -->
+  <div id="screen-game">
+    <div class="top-bar">
+      <button class="back-btn" id="back-btn" aria-label="Retour">‹</button>
+      <div class="theme-title" id="theme-title"></div>
+      <div class="card-counter" id="card-counter"></div>
+    </div>
+
+    <div class="carousel-wrap">
+      <div class="carousel" id="carousel"></div>
+    </div>
+
+    <div class="player-row">
+      <button class="arrow" id="prev-btn" aria-label="Musique précédente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+
+      <div class="player-card">
+        <button class="reveal-btn" id="reveal-btn">Afficher la réponse</button>
+        <div class="answer-box" id="answer-box"><span class="placeholder">Réponse masquée</span></div>
+
+        <div class="transport">
+          <button class="play-btn" id="play-btn" aria-label="Lecture">
+            <span id="play-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="progress-area">
+            <div class="progress-bar" id="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+              <div class="progress-limit" id="progress-limit"></div>
+            </div>
+            <div class="time-row">
+              <span id="current-time">0:00</span>
+              <span id="total-time">0:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="audio-error" id="audio-error"></div>
+      </div>
+
+      <button class="arrow" id="next-btn" aria-label="Musique suivante">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
