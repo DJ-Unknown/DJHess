@@ -187,8 +187,9 @@ button:focus-visible,
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 2px 4px 16px 4px;
-  min-height: 62px;
+  padding: 14px 4px 22px 4px;
+  margin-top: 6px;
+  min-height: 78px;
   justify-content: center;
   text-align: center;
 }
@@ -200,6 +201,12 @@ button:focus-visible,
   letter-spacing: 0.1em;
   color: var(--grey);
   margin-bottom: -2px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hints-label.visible {
+  opacity: 1;
 }
 
 .hints-label.hint-empty {

@@ -136,6 +136,7 @@
       row.classList.toggle("hint-empty", !hints[i]);
       hintTextEls[i].textContent = "";
     });
+    hintsLabel.classList.remove("visible");
     hintsLabel.classList.toggle("hint-empty", !hints.some(function (h) { return h; }));
 
     audioError.classList.remove("visible");
@@ -236,6 +237,7 @@
         hintsShown[i] = true;
         hintTextEls[i].textContent = hints[i];
         hintRows[i].classList.add("visible");
+        if (i === 0) hintsLabel.classList.add("visible");
       }
     });
   });
