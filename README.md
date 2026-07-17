@@ -81,7 +81,7 @@ espace, en minuscules : c'est ce qui ira dans l'adresse de la carte.
 N'oublie pas la virgule entre deux thèmes (juste avant `"creatures"`
 s'il y en a un autre avant).
 
-Quatre informations par musique :
+Cinq informations par musique :
 - `answer` : la réponse que les joueurs doivent trouver (ex :
   "Dragons" pour une musique de Game of Thrones dans un thème
   "Créatures" — ce n'est pas forcément le titre ni l'artiste)
