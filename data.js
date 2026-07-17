@@ -57,13 +57,13 @@ const THEMES = {
   "a_la_campagne": {
     title: "A la campagne",
     tracks: [
-      { answer: "Fleurs/Flowers", title: "Flowers", artist: "Miley Cyrus", audio: "audio/a_la_campagne/miley-cyrus-flowers.mp3", limit: 26, hints: ["Indice 1 (à compléter)", "Indice 2 (à compléter)"] },
-      { answer: "Prairie", title: "La petite maison dans la prairie", artist: "David Rose", audio: "audio/a_la_campagne/maison-prairie.mp3", limit: 30, hints: ["Indice 1 (à compléter)", "Indice 2 (à compléter)"] },
-      { answer: "Ferme/Fermier", title: "Sans contrefaçon", artist: "Mylène Farmer", audio: "audio/a_la_campagne/sans-contrefacon.mp3", limit: 30, hints: ["Indice 1 (à compléter)", "Indice 2 (à compléter)"] },
-      { answer: "Des champs", title: "Ramenez la coupe à la maison", artist: "Vegedream", audio: "audio/a_la_campagne/vegedream-ramenez-la-coupe.mp3", limit: 30, hints: ["Indice 1 (à compléter)", "Indice 2 (à compléter)"] },
-      { answer: "Village", title: "YMCA", artist: "Village People", audio: "audio/a_la_campagne/village-people-ymca.mp3", limit: 30, hints: ["Indice 1 (à compléter)", "Indice 2 (à compléter)"] },
-      { answer: "Oiseaux", title: "Birds", artist: "Imagine Dragons", audio: "audio/a_la_campagne/imagine-dragons-birds.mp3", limit: 35, hints: ["Indice 1 (à compléter)", "Indice 2 (à compléter)"] },
-      { answer: "Poulain", title: "Comptine d'un autre été", artist: "Yann Tiersen", audio: "audio/a_la_campagne/yann-tiersen-comptine-ete.mp3", limit: 30, hints: ["Indice 1 (à compléter)", "Indice 2 (à compléter)"] }
+      { answer: "Fleurs/Flowers", title: "Flowers", artist: "Miley Cyrus", audio: "audio/a_la_campagne/miley-cyrus-flowers.mp3", limit: 26, hints: ["Titre", "I can buy myself..."] },
+      { answer: "Prairie", title: "La petite maison dans la prairie", artist: "David Rose", audio: "audio/a_la_campagne/maison-prairie.mp3", limit: 30, hints: ["Série", "Petite maison"] },
+      { answer: "Ferme/Fermier", title: "Sans contrefaçon", artist: "Mylène Farmer", audio: "audio/a_la_campagne/sans-contrefacon.mp3", limit: 30, hints: ["Chanteuse", "Libertine"] },
+      { answer: "Des champs", title: "Ramenez la coupe à la maison", artist: "Vegedream", audio: "audio/a_la_campagne/vegedream-ramenez-la-coupe.mp3", limit: 30, hints: ["Paroles", "Sélectionneur"] },
+      { answer: "Village", title: "YMCA", artist: "Village People", audio: "audio/a_la_campagne/village-people-ymca.mp3", limit: 30, hints: ["Groupe", "People"] },
+      { answer: "Oiseaux", title: "Birds", artist: "Imagine Dragons", audio: "audio/a_la_campagne/imagine-dragons-birds.mp3", limit: 35, hints: ["Titre", "So fly high"] },
+      { answer: "Poulain", title: "Comptine d'un autre été", artist: "Yann Tiersen", audio: "audio/a_la_campagne/yann-tiersen-comptine-ete.mp3", limit: 30, hints: ["Film", "Fabuleux Destin"] }
     ]
   }
 
