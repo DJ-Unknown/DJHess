@@ -20,6 +20,8 @@
   var nextBtn = document.getElementById("next-btn");
   var backBtn = document.getElementById("back-btn");
   var audioError = document.getElementById("audio-error");
+  var hintRows = [document.getElementById("hint-1"), document.getElementById("hint-2")];
+  var hintTextEls = [document.getElementById("hint-1-text"), document.getElementById("hint-2-text")];
 
   var audio = new Audio();
   var currentTheme = null;
@@ -27,6 +29,7 @@
   var currentIndex = 0;
   var revealed = false;
   var limitReached = false;
+  var hintsShown = [false, false];
 
   var ICON_PLAY = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
   var ICON_PAUSE = '<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
@@ -125,6 +128,14 @@
     revealBtn.textContent = "Afficher la réponse";
     renderAnswerBox();
 
+    hintsShown = [false, false];
+    var hints = track.hints || [];
+    hintRows.forEach(function (row, i) {
+      row.classList.remove("visible");
+      row.classList.toggle("hint-empty", !hints[i]);
+      hintTextEls[i].textContent = "";
+    });
+
     audioError.classList.remove("visible");
     audio.src = track.audio;
     audio.currentTime = 0;
@@ -207,13 +218,24 @@
     var pct = (audio.currentTime / audio.duration) * 100;
     progressFill.style.width = pct + "%";
     currentTimeEl.textContent = formatTime(audio.currentTime);
-    var limit = currentTheme.tracks[currentIndex].limit;
+    var track = currentTheme.tracks[currentIndex];
+    var limit = track.limit;
     var isOver = audio.currentTime >= limit;
     progressFill.classList.toggle("over-limit", isOver);
     if (isOver && !limitReached) {
       limitReached = true;
       renderAnswerBox();
     }
+
+    var hints = track.hints || [];
+    var thresholds = [limit * 0.5, limit * 0.75];
+    thresholds.forEach(function (threshold, i) {
+      if (!hintsShown[i] && hints[i] && audio.currentTime >= threshold) {
+        hintsShown[i] = true;
+        hintTextEls[i].textContent = hints[i];
+        hintRows[i].classList.add("visible");
+      }
+    });
   });
 
   function seek(evt) {

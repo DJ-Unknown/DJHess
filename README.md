@@ -91,6 +91,10 @@ Quatre informations par musique :
 - `limit` : le temps en secondes à partir duquel la barre devient
   rouge et où la réponse + le titre + l'artiste s'affichent
   automatiquement (le temps est écoulé)
+- `hints` : un tableau de 2 indices texte, ex. `["Indice 1", "Indice 2"]`.
+  Le 1er apparaît automatiquement à la moitié du temps limite, le
+  2e aux 3/4 du temps limite. Champ optionnel : laisse `""` ou
+  retire le champ si tu ne veux pas d'indice pour une musique.
 
 Dans le jeu : le bouton "Afficher la réponse" ne montre QUE
 `answer`, pour que l'arbitre puisse vérifier la réponse d'une
