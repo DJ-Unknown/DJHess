@@ -22,6 +22,7 @@
   var audioError = document.getElementById("audio-error");
   var hintRows = [document.getElementById("hint-1"), document.getElementById("hint-2")];
   var hintTextEls = [document.getElementById("hint-1-text"), document.getElementById("hint-2-text")];
+  var hintsLabel = document.getElementById("hints-label");
 
   var audio = new Audio();
   var currentTheme = null;
@@ -135,6 +136,7 @@
       row.classList.toggle("hint-empty", !hints[i]);
       hintTextEls[i].textContent = "";
     });
+    hintsLabel.classList.toggle("hint-empty", !hints.some(function (h) { return h; }));
 
     audioError.classList.remove("visible");
     audio.src = track.audio;
