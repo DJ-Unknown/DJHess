@@ -42,6 +42,16 @@
     return m + ":" + (s < 10 ? "0" : "") + s;
   }
 
+  function getAudioPath(track) {
+    // "audio" ne contient que le nom du fichier (ex: "1.mp3") :
+    // le dossier est déduit automatiquement du slug du thème
+    // (audio/<slug-du-theme>/<fichier>). Si "audio" contient déjà
+    // un chemin complet (avec un "/"), on le garde tel quel pour
+    // rester compatible avec les anciens data.js.
+    if (track.audio.indexOf("/") !== -1) return track.audio;
+    return "audio/" + currentThemeKey + "/" + track.audio;
+  }
+
   function buildMenu() {
     var keys = Object.keys(THEMES);
     themeListEl.innerHTML = "";
@@ -140,7 +150,7 @@
     hintsLabel.classList.toggle("hint-empty", !hints.some(function (h) { return h; }));
 
     audioError.classList.remove("visible");
-    audio.src = track.audio;
+    audio.src = getAudioPath(track);
     audio.currentTime = 0;
     progressFill.style.width = "0%";
     progressFill.classList.remove("over-limit");
@@ -195,7 +205,7 @@
   function togglePlay() {
     if (audio.paused) {
       audio.play().catch(function () {
-        audioError.textContent = "Impossible de lire le fichier audio : " + currentTheme.tracks[currentIndex].audio;
+        audioError.textContent = "Impossible de lire le fichier audio : " + getAudioPath(currentTheme.tracks[currentIndex]);
         audioError.classList.add("visible");
       });
     } else {
@@ -213,7 +223,7 @@
     playIcon.innerHTML = ICON_PLAY;
   });
   audio.addEventListener("error", function () {
-    audioError.textContent = "Fichier audio introuvable : " + currentTheme.tracks[currentIndex].audio;
+    audioError.textContent = "Fichier audio introuvable : " + getAudioPath(currentTheme.tracks[currentIndex]);
     audioError.classList.add("visible");
   });
   audio.addEventListener("timeupdate", function () {
