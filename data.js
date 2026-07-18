@@ -70,13 +70,13 @@ const THEMES = {
   ,"ca_tourne": {
     title: "Ca tourne",
     tracks: [
-      { answer: "Le monde", title: "Avant toi", artist: "Viita & Slimane", audio: "audio/ca_tourne/avant-toi.mp3", limit: 15, hints: ["Paroles", "Il ne tournait pas rond"] },
-      { answer: "Carrousel", title: "Carrousel", artist: "Amir ft Indila", audio: "audio/ca_tourne/carrousel.mp3", limit: 15, hints: ["Titre", "Attraction"] },
-      { answer: "Les images du long métrage", title: "Je m'en vais", artist: "Vianney", audio: "audio/ca_tourne/je-men-vais.mp3", limit: 15, hints: ["Paroles", "Et tournent et tournent dans ma tête"] },
-      { answer: "Les violons", title: "Tournent les violons", artist: "Jean-Jacques Goldman", audio: "audio/ca_tourne/les-violons.mp3", limit: 15, hints: ["Titre", "Instrument"] },
-      { answer: "Moulin", title: "Feel Good Inc.", artist: "Gorillaz", audio: "audio/ca_tourne/feel-good.mp3", limit: 15, hints: ["Paroles", "Comme une petite éolienne"] },
-      { answer: "Toupie", title: "Time", artist: "Hans Zimmer", audio: "audio/ca_tourne/time.mp3", limit: 15, hints: ["Film", "Jouet"] },
-      { answer: "Moi", title: "Tourner dans le vide", artist: "Indila", audio: "audio/ca_tourne/dans-le-vide.mp3", limit: 15, hints: ["Paroles", "Qui tourne ?"] }
+      { answer: "Le monde", title: "Avant toi", artist: "Viita & Slimane", audio: "audio/ca_tourne/avant-toi.mp3", limit: 28, hints: ["Paroles", "Il ne tournait pas rond"] },
+      { answer: "Carrousel", title: "Carrousel", artist: "Amir ft Indila", audio: "audio/ca_tourne/carrousel.mp3", limit: 29, hints: ["Titre", "Attraction"] },
+      { answer: "Les images du long métrage", title: "Je m'en vais", artist: "Vianney", audio: "audio/ca_tourne/je-men-vais.mp3", limit: 36, hints: ["Paroles", "Et tournent et tournent dans ma tête"] },
+      { answer: "Les violons", title: "Tournent les violons", artist: "Jean-Jacques Goldman", audio: "audio/ca_tourne/les-violons.mp3", limit: 34, hints: ["Titre", "Instrument"] },
+      { answer: "Moulin", title: "Feel Good Inc.", artist: "Gorillaz", audio: "audio/ca_tourne/feel-good.mp3", limit: 32, hints: ["Paroles", "Comme une petite éolienne"] },
+      { answer: "Toupie", title: "Time", artist: "Hans Zimmer", audio: "audio/ca_tourne/time.mp3", limit: 35, hints: ["Film", "Jouet"] },
+      { answer: "Moi", title: "Tourner dans le vide", artist: "Indila", audio: "audio/ca_tourne/dans-le-vide.mp3", limit: 35, hints: ["Paroles", "Qui tourne ?"] }
     ]
   }
   
