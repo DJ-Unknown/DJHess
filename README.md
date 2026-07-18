@@ -65,13 +65,13 @@ est commenté en détail. En résumé, pour chaque thème :
 "creatures": {
   title: "Créatures",
   tracks: [
-    { answer: "Dragons", title: "Game of Thrones Main Theme", artist: "Ramin Djawadi", audio: "audio/creatures/1.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "audio/creatures/2.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "audio/creatures/3.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "audio/creatures/4.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "audio/creatures/5.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "audio/creatures/6.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "audio/creatures/7.mp3", limit: 15 }
+    { answer: "Dragons", title: "Game of Thrones Main Theme", artist: "Ramin Djawadi", audio: "1.mp3", limit: 15 },
+    { answer: "...", title: "...", artist: "...", audio: "2.mp3", limit: 15 },
+    { answer: "...", title: "...", artist: "...", audio: "3.mp3", limit: 15 },
+    { answer: "...", title: "...", artist: "...", audio: "4.mp3", limit: 15 },
+    { answer: "...", title: "...", artist: "...", audio: "5.mp3", limit: 15 },
+    { answer: "...", title: "...", artist: "...", audio: "6.mp3", limit: 15 },
+    { answer: "...", title: "...", artist: "...", audio: "7.mp3", limit: 15 }
   ]
 }
 ```
