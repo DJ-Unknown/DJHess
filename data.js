@@ -75,7 +75,7 @@ const THEMES = {
       { answer: "Les images du long métrage", title: "Je m'en vais", artist: "Vianney", audio: "audio/ca_tourne/je-men-vais.mp3", limit: 36, hints: ["Paroles", "Et tournent et tournent dans ma tête"] },
       { answer: "Les violons", title: "Tournent les violons", artist: "Jean-Jacques Goldman", audio: "audio/ca_tourne/les-violons.mp3", limit: 34, hints: ["Titre", "Instrument"] },
       { answer: "Moulin", title: "Feel Good Inc.", artist: "Gorillaz", audio: "audio/ca_tourne/feel-good.mp3", limit: 32, hints: ["Paroles", "Comme une petite éolienne"] },
-      { answer: "Toupie", title: "Time", artist: "Hans Zimmer", audio: "audio/ca_tourne/time.mp3", limit: 35, hints: ["Film", "Jouet"] },
+      { answer: "Toupie", title: "Time", artist: "Hans Zimmer", audio: "audio/ca_tourne/time.mp3", limit: 45, hints: ["Film", "Jouet"] },
       { answer: "Moi", title: "Tourner dans le vide", artist: "Indila", audio: "audio/ca_tourne/dans-le-vide.mp3", limit: 35, hints: ["Paroles", "Qui tourne ?"] }
     ]
   }
