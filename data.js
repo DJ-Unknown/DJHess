@@ -90,9 +90,9 @@ const THEMES = {
     title: "ID2M",
     tracks: [
       { answer: "Pascal", title: "Lucie", artist: "Pascal Obispo", audio: "lucie.mp3", limit: 35, hints: ["Chanteur", "Ca marche !"] },
-      { answer: "Anas", title: "Le thé à la menthe", artist: "Naïma", audio: "the-a-la-menthe.mp3", limit: 20, hints: ["Chaaay", "binaânaâ"] },
+      { answer: "Anas", title: "Le thé à la menthe", artist: "Naïma", audio: "the-a-la-menthe.mp3", limit: 20, hints: ["Chaaay...", "binaânaâ !"] },
       { answer: "Pauline", title: "La bicyclette", artist: "Yves Montand", audio: "bicyclette.mp3", limit: 29, hints: ["Paroles", "Drôle de surnom"] },
-      { answer: "Arthur", title: "Quelque chose de magique", artist: "La légende du roi Arthur", audio: "roi-arthur.mp3", limit: 35, hints: ["comédie musicale", "Légende"] },
+      { answer: "Arthur", title: "Quelque chose de magique", artist: "La légende du roi Arthur", audio: "roi-arthur.mp3", limit: 35, hints: ["Comédie musicale", "Légende"] },
       { answer: "Franck et Vincent (les deux dans l'ordre)", title: "Tu veux mon zizi", artist: "Francky Vincent", audio: "francky-vincent.mp3", limit: 35, hints: ["Il faut les deux", "et dans le bon ordre !"] },
       { answer: "Emmanuel", title: "La valse d'Amélie", artist: "Yann Tiersen", audio: "valse-damelie.mp3", limit: 30, hints: ["Prochaine musique sur sa chaîne ?", "@kingamadeus123"] },
       { answer: "Juliette", title: "Wayeh", artist: "Theodort", audio: "wayeh.mp3", limit: 35, hints: ["Chanteur", "Elle est docteure"] }
