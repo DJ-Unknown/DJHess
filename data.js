@@ -86,7 +86,7 @@ const THEMES = {
     ]
   }
 
-  ,"ID2M": {
+  ,"id2m": {
     title: "ID2M",
     tracks: [
       { answer: "Pascal", title: "Lucie", artist: "Pascal Obispo", audio: "lucie.mp3", limit: 35, hints: ["Chanteur", "Ca marche !"] },
