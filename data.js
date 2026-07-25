@@ -82,7 +82,7 @@ const THEMES = {
       { answer: "Les violons", title: "Tournent les violons", artist: "Jean-Jacques Goldman", audio: "les-violons.mp3", limit: 34, hints: ["Titre", "Instrument"] },
       { answer: "Moulin", title: "Feel Good Inc.", artist: "Gorillaz", audio: "feel-good.mp3", limit: 32, hints: ["Paroles", "Comme une petite éolienne"] },
       { answer: "Toupie", title: "Time", artist: "Hans Zimmer", audio: "time.mp3", limit: 45, hints: ["Film", "Jouet"] },
-      { answer: "Moi", title: "Tourner dans le vide", artist: "Indila", audio: "dans-le-vide.mp3", limit: 35, hints: ["Paroles", "Qui tourne ?"] }
+      { answer: "Moi/Elle/Indila", title: "Tourner dans le vide", artist: "Indila", audio: "dans-le-vide.mp3", limit: 35, hints: ["Paroles", "Qui tourne ?"] }
     ]
   }
 
