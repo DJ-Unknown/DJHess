@@ -99,6 +99,19 @@ const THEMES = {
     ]
   }
 
+  ,"love_letter": {
+    title: "Love Letter",
+    tracks: [
+      { answer: "Prince", title: "Prince Ali", artist: "Alan Menken", audio: "aladdin.mp3", limit: 35, hints: ["Film", "Génie"] },
+      { answer: "Prêtre", title: "Ameno", artist: "Era", audio: "ameno.mp3", limit: 35, hints: ["Sacerdos", "Presbyter"] },
+      { answer: "Princesse", title: "Lettre à une femme", artist: "Ninho", audio: "ninho.mp3", limit: 40, hints: ["Paroles", "Lettre à une femme"] },
+      { answer: "Comtesse/Baron", title: "Le trésor", artist: "Jérôme Rebotier", audio: "tresor.mp3", limit: 35, hints: ["Film", "Une histoire de vengeance"] },
+      { answer: "Garde", title: "L'amour est un oiseau rebelle", artist: "Carmen", audio: "garde.mp3", limit: 34, hints: ["...", "..."] },
+      { answer: "Roi", title: "Les rois du monde", artist: "Roméo et Juliette", audio: "rois.mp3", limit: 18, hints: ["Titre", "Paroles"] },
+      { answer: "Espionne", title: "James Bond theme", artist: "David Arnold", audio: "007.mp3", limit: 35, hints: ["Film", "My name is..."] }
+    ]
+  }
+
   /*
   Pour ajouter un nouveau thème, décommente et complète ce
   modèle (retire les /* et *​/ autour du bloc) :
@@ -116,5 +129,4 @@ const THEMES = {
     ]
   }
   */
-
 };
