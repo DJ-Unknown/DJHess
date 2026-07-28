@@ -1,144 +1,99 @@
-# Blind Test — mode d'emploi
+# Blind Test — guide pour ajouter un thème
 
-Ce dossier contient tout ton petit jeu, prêt à mettre en ligne
-gratuitement. Tu n'as besoin d'installer aucun logiciel : tout se
-fait depuis le site github.com dans ton navigateur.
+Ce dépôt contient le jeu de blind test. Ce guide explique comment
+ajouter tes propres thèmes et musiques, en modifiant simplement des
+fichiers directement depuis GitHub (aucun logiciel à installer).
 
-## Ce qu'il y a dans le dossier
+## Structure du dépôt
 
-- `index.html` → la page du jeu (tu n'as jamais besoin d'y toucher)
-- `style.css` → l'apparence (tu n'as jamais besoin d'y toucher)
-- `script.js` → le fonctionnement (tu n'as jamais besoin d'y toucher)
+- `index.html`, `style.css`, `script.js` → le jeu lui-même
+  (tu n'as jamais besoin d'y toucher)
 - `data.js` → **le seul fichier que tu modifies** : c'est ici que
-  tu listes tes thèmes et tes musiques
-- `audio/` → dossier où tu ranges tes fichiers mp3, un sous-dossier
-  par thème (ex : `audio/exemple/`, `audio/creatures/`...)
+  sont listés tous les thèmes et leurs musiques
+- `audio/` → un sous-dossier par thème, contenant les fichiers mp3
 
-## Étape 1 — Créer un compte GitHub
+## Ajouter un nouveau thème
 
-1. Va sur https://github.com
-2. Clique sur "Sign up" et crée un compte gratuit (email + mot de passe)
+1. Va sur `data.js` dans le dépôt GitHub et clique sur le crayon ✏️
+   (« Edit this file ») pour l'éditer directement dans le
+   navigateur
+2. Copie-colle le modèle commenté en bas du fichier (entre
+   `/*` et `*/`), juste avant la ligne `};` qui ferme l'objet
+   `THEMES`
+3. Décommente-le (retire les `/*` et `*/` autour du bloc) et
+   remplis les valeurs — n'oublie pas la virgule `,` avant ton
+   nouveau thème s'il y en a déjà un autre au-dessus
+4. En bas de page, clique sur "Commit changes" (bouton vert) —
+   le site se met à jour tout seul en moins d'une minute
 
-## Étape 2 — Créer le dépôt (le "dossier en ligne")
-
-1. Une fois connecté, clique sur le "+" en haut à droite puis
-   "New repository"
-2. Donne-lui un nom simple, sans espace ni accent, par exemple
-   `blind-test`
-3. Laisse-le en "Public"
-4. Ne coche aucune case (pas de README, pas de .gitignore)
-5. Clique sur "Create repository"
-
-## Étape 3 — Mettre tes fichiers en ligne
-
-1. Sur la page de ton dépôt tout neuf, clique sur le lien
-   "uploading an existing file"
-2. Glisse-dépose TOUT le contenu de ce dossier (les fichiers
-   `index.html`, `style.css`, `script.js`, `data.js`, et le dossier
-   `audio` avec tes mp3 dedans) dans la zone prévue
-   - Astuce : glisse le dossier `audio` en entier, GitHub garde
-     l'arborescence des sous-dossiers
-3. En bas de page, clique sur "Commit changes" (le bouton vert)
-
-Tu pourras toujours revenir plus tard sur cette même page
-("Add file" → "Upload files") pour ajouter de nouveaux thèmes ou
-corriger `data.js`.
-
-## Étape 4 — Activer GitHub Pages
-
-1. Dans ton dépôt, va dans l'onglet "Settings"
-2. Dans le menu de gauche, clique sur "Pages"
-3. Dans "Branch", choisis `main` (garde `/ (root)`) puis "Save"
-4. Attends une minute, puis rafraîchis la page : une bannière
-   verte t'indique l'adresse de ton site, du type :
-   `https://ton-pseudo.github.io/blind-test/`
-
-Cette adresse est ton jeu, en ligne, gratuitement, pour toujours.
-
-## Étape 5 — Ajouter tes thèmes dans `data.js`
-
-Ouvre `data.js` (bouton "crayon" ✏️ sur la page du fichier dans
-GitHub, pour l'éditer directement dans le navigateur). Le fichier
-est commenté en détail. En résumé, pour chaque thème :
+Exemple de thème complet :
 
 ```js
 "creatures": {
   title: "Créatures",
   tracks: [
-    { answer: "Dragons", title: "Game of Thrones Main Theme", artist: "Ramin Djawadi", audio: "1.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "2.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "3.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "4.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "5.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "6.mp3", limit: 15 },
-    { answer: "...", title: "...", artist: "...", audio: "7.mp3", limit: 15 }
+    { answer: "Dragons", title: "Game of Thrones Main Theme", artist: "Ramin Djawadi", audio: "1.mp3", limit: 15, hints: ["Indice 1", "Indice 2"] },
+    { answer: "...", title: "...", artist: "...", audio: "2.mp3", limit: 15, hints: ["...", "..."] },
+    { answer: "...", title: "...", artist: "...", audio: "3.mp3", limit: 15, hints: ["...", "..."] },
+    { answer: "...", title: "...", artist: "...", audio: "4.mp3", limit: 15, hints: ["...", "..."] },
+    { answer: "...", title: "...", artist: "...", audio: "5.mp3", limit: 15, hints: ["...", "..."] },
+    { answer: "...", title: "...", artist: "...", audio: "6.mp3", limit: 15, hints: ["...", "..."] },
+    { answer: "...", title: "...", artist: "...", audio: "7.mp3", limit: 15, hints: ["...", "..."] }
   ]
 }
 ```
 
 Le nom entre guillemets (`"creatures"`) doit être sans accent, sans
-espace, en minuscules : c'est ce qui ira dans l'adresse de la carte.
-N'oublie pas la virgule entre deux thèmes (juste avant `"creatures"`
-s'il y en a un autre avant).
+espace, en minuscules (c'est un "slug") : c'est aussi le nom du
+dossier audio correspondant (voir plus bas), et ce qui ira dans
+l'adresse de la carte (`?theme=creatures`).
 
-Cinq informations par musique :
-- `answer` : la réponse que les joueurs doivent trouver (ex :
-  "Dragons" pour une musique de Game of Thrones dans un thème
-  "Créatures" — ce n'est pas forcément le titre ni l'artiste)
-- `title` : le vrai titre de la musique, affiché seulement à titre
-  informatif
-- `artist` : le vrai artiste, affiché seulement à titre informatif
-- `limit` : le temps en secondes à partir duquel la barre devient
-  rouge et où la réponse + le titre + l'artiste s'affichent
-  automatiquement (le temps est écoulé)
-- `hints` : un tableau de 2 indices texte, ex. `["Indice 1", "Indice 2"]`.
-  Le 1er apparaît automatiquement à la moitié du temps limite, le
-  2e aux 3/4 du temps limite. Champ optionnel : laisse `""` ou
-  retire le champ si tu ne veux pas d'indice pour une musique.
+## Les champs de chaque musique
 
-Dans le jeu : le bouton "Afficher la réponse" ne montre QUE
-`answer`, pour que l'arbitre puisse vérifier la réponse d'une
-équipe sans dévoiler le titre ni l'artiste. Une fois le temps
-limite dépassé pendant la lecture, les trois informations
-s'affichent automatiquement.
+- `answer` : LA réponse attendue des joueurs (ex : "Dragons" — ce
+  n'est pas forcément le titre ni l'artiste !)
+- `title` : le vrai titre de la musique, affiché uniquement à
+  titre informatif, jamais demandé aux joueurs
+- `artist` : le vrai artiste / compositeur, affiché uniquement à
+  titre informatif
+- `audio` : uniquement le **nom du fichier** mp3 (ex :
+  `"ma-musique.mp3"`), sans dossier devant. Le jeu va chercher ce
+  fichier tout seul dans `audio/nom-du-theme/` — le dossier doit
+  donc porter exactement le même nom que la clé du thème
+- `limit` : le temps limite en secondes pour trouver la réponse.
+  La barre de progression devient rouge une fois ce temps
+  dépassé, et la réponse + le titre + l'artiste s'affichent alors
+  automatiquement
+- `hints` : un tableau de 2 indices texte, ex.
+  `["Indice 1", "Indice 2"]`. Le 1er apparaît automatiquement à
+  la moitié du temps limite, le 2e aux 3/4. Champ optionnel :
+  laisse `""` ou retire le champ si tu ne veux pas d'indice pour
+  une musique
 
-Après modification, clique sur "Commit changes" en bas de la page
-GitHub. Le site se met à jour tout seul en moins d'une minute.
+## Ajouter les fichiers audio
 
-## Étape 6 — Ajouter les fichiers audio
+1. Crée un nouveau dossier dans `audio/` portant exactement le
+   même nom que la clé du thème (ex : `audio/creatures/`) — tu
+   peux le faire en uploadant directement un fichier dedans avec
+   "Add file" → "Upload files", en tapant le chemin
+   `audio/creatures/1.mp3` dans la zone de dépôt
+2. Dépose tes mp3 dedans, nommés comme tu veux (le nom doit juste
+   correspondre à ce que tu as écrit dans le champ `audio` de
+   `data.js`)
+3. Privilégie des extraits courts (30 secondes à 1 minute) : plus
+   légers et plus rapides à charger sur mobile
 
-- Formats : `mp3` fonctionne partout
-- Garde des extraits courts (30 secondes à 1 minute suffisent pour
-  un blind test) : les fichiers sont plus légers et plus rapides à
-  charger sur mobile
-- Dépose-les dans `audio/nom-du-theme/` avec les noms `1.mp3` à
-  `7.mp3`, dans le même ordre que dans `data.js`
+## Tester
 
-## Étape 7 — Générer le QR code de chaque carte
-
-L'adresse de chaque thème est :
-
-```
-https://ton-pseudo.github.io/blind-test/?theme=creatures
-```
-
-(remplace `creatures` par le nom exact du thème dans `data.js`)
-
-Pour transformer cette adresse en QR code, utilise un générateur
-gratuit comme https://www.qr-code-generator.com/ ou
-https://qrcode-monkey.com/ : colle l'adresse, télécharge l'image,
-imprime-la sur ta carte physique.
-
-## Tester sans QR code
-
-Si tu vas directement sur `https://ton-pseudo.github.io/blind-test/`
-(sans `?theme=...`), tu arrives sur un petit menu qui liste tous
-les thèmes déjà créés dans `data.js` — pratique pour tester avant
-d'imprimer les cartes.
+Va sur l'adresse du site sans paramètre pour voir le menu qui
+liste tous les thèmes déjà créés dans `data.js`, pratique pour
+tester avant de préparer les cartes. Tu peux aussi aller
+directement sur `?theme=nom-du-theme` pour ouvrir un thème
+précis.
 
 ## Besoin d'aide ?
 
 Si un fichier audio ne se lance pas, le jeu affiche un message en
-rouge indiquant le chemin du fichier attendu : vérifie que le nom
-et l'emplacement correspondent exactement à ce qui est écrit dans
-`data.js` (majuscules/minuscules comprises).
+rouge indiquant le chemin exact attendu : vérifie que le nom du
+fichier et le nom du dossier correspondent exactement à ce qui
+est écrit dans `data.js` (majuscules/minuscules comprises).
