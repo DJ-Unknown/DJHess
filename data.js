@@ -120,7 +120,7 @@ const THEMES = {
       { answer: "Thalassophobie / Mer / Océan", title: "Face à la mer", artist: "Callogero ft Passi", audio: "mer.mp3", limit: 32, hints: ["Titre", "J'aurais dû grandir"] },
       { answer: "Trypophobie / trous", title: "Le poinçonneur de lilas", artist: "Serge Gainsbourg", audio: "trous.mp3", limit: 31, hints: ["Paroles", "Un bad tryp finalement"] },
       { answer: "Pyrophobie / Feu", title: "Les feux de l'amour : Nadia's Theme", artist: "Barry De Vorzon and Perry Botkin Jr.", audio: "feux.mp3", limit: 30, hints: ["Série TV", "de l'amour"] },
-      { answer: "Hippopotomonstrosesquippedaliophobie / Longs mots", title: "Supercalifragilisticexpialidocious", artist: "Frères Sherman", audio: "poppins.mp3", limit: 30, hints: ["Paroles", "Le nom fait peur"] }
+      { answer: "Hippopotomonstrosesquippedaliophobie / Longs mots", title: "Supercalifragilisticexpialidocious", artist: "Frères Sherman", audio: "poppins.mp3", limit: 30, hints: ["Paroles", "Le nom fait peur"] },
       { answer: "Hématophobie / Sang", title: "Bleed it out", artist: "Linkin Park", audio: "bleed.mp3", limit: 35, hints: ["Titre", "Elle peut faire perdre conscience"] },
     ]
   }
