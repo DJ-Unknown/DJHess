@@ -1,4 +1,4 @@
-# Blind Test — guide pour ajouter un thème
+# DJ Hess — guide pour ajouter un thème
 
 Ce dépôt contient le jeu de blind test. Ce guide explique comment
 ajouter tes propres thèmes et musiques, en modifiant simplement des
