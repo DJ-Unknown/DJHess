@@ -108,7 +108,7 @@ const THEMES = {
       { answer: "Comtesse/Baron", title: "Le trésor", artist: "Jérôme Rebotier", audio: "tresor.mp3", limit: 35, hints: ["Film", "Une histoire de vengeance"] },
       { answer: "Garde", title: "L'amour est un oiseau rebelle", artist: "Carmen", audio: "garde.mp3", limit: 34, hints: ["Paroles", "Attention à toi"] },
       { answer: "Roi", title: "Les rois du monde", artist: "Roméo et Juliette", audio: "rois.mp3", limit: 18, hints: ["Titre", "Paroles"] },
-      { answer: "Espionne", title: "James Bond theme", artist: "David Arnold", audio: "007.mp3", limit: 37, hints: ["Film", "My name is..."] }
+      { answer: "Espionne", title: "Writing's on the wall", artist: "Sam Smith", audio: "007.mp3", limit: 35, hints: ["Film", "My name is..."] }
     ]
   }
 
